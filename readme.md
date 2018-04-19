@@ -5,7 +5,12 @@ Represent a 3d array as a single array by using offsets to compute the array ind
 Learning exercise, work in progress.
 
 ## Example Array
-array[3][3][3]
+`array[index]` simulates `array[Dim1][Dim2][Dim3]`
+
+To calculate index:
+`x * (DIMENSION_3 * DIMENSION_2)) + (y * DIMENSION_3) + z`
+
+...where x, y and z are the values for DIMENSION_1, DIMENSION_2 and DIMENSION_3 respectively.
 ```
 Index Dim1  Dim2  Dim3
 ----------------------
