@@ -45,7 +45,9 @@ i     x     y     z
 25    2     2     1
 26    2     2     2
 ```
+## Demo
 
+To build, run `make c3d`. The run `./bin/c3d`.
 ## Resources
 * [SO Question][1] (quite a few wrong/confusing answers here)
 
