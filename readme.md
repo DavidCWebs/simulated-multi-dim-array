@@ -2,17 +2,20 @@ Simulated 3D Array in C
 =======================
 Represent a 3d array as a single array by using offsets to compute the array index.
 
-Learning exercise, work in progress.
+This repo is just a learning exercise.
 
 ## Example Array
-`array[index]` simulates `array[Dim1][Dim2][Dim3]`
+For a conceptual "3D" array `array3d[xmax][ymax][zmax]`, the total number of elements required to represent this as a flat array is `xmax * ymax * znax`: `array3d[xmax * ymax * zmax]`.
 
-To calculate index:
-`x * (DIMENSION_3 * DIMENSION_2)) + (y * DIMENSION_3) + z`
+Array indexes are then calculated with an offset to provide the multi-dimensional behaviour: `array[f(x, y, z)]` simulates `array[x][y][z]`, where `f(x, y, z)` returns an integer index.
 
-...where x, y and z are the values for DIMENSION_1, DIMENSION_2 and DIMENSION_3 respectively.
+To calculate index `i` for `array3d[x][y][z]`:
+
+` i = x * (ymax * zmax)) + (y * zmax) + z`
+
+## Array Visualisation
 ```
-Index Dim1  Dim2  Dim3
+i     x     y     z
 ----------------------
 0     0     0     0
 1     0     0     1
@@ -41,5 +44,9 @@ Index Dim1  Dim2  Dim3
 24    2     2     0
 25    2     2     1
 26    2     2     2
-27    -     -     -
 ```
+
+## Resources
+* [SO Question][1] (quite a few wrong/confusing answers here)
+
+[1]: https://stackoverflow.com/questions/7367770/how-to-flatten-or-index-3d-array-in-1d-array

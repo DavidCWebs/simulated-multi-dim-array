@@ -5,3 +5,6 @@ main: $(SOURCES)
 
 c3d: three-d.c
 	cc -W -Wall -o bin/c3d three-d.c
+
+c4d: four-d.c
+	cc -W -Wall -o bin/c4d four-d.c
