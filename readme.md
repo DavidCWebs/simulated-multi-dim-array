@@ -7,7 +7,8 @@ This repo is just a learning exercise.
 ## Example Array
 For a conceptual "3D" array `array3d[xmax][ymax][zmax]`, the total number of elements required to represent this as a flat array is `xmax * ymax * zmax`: `array3d[xmax * ymax * zmax]`.
 
-Array indexes are then calculated with an offset to provide the multi-dimensional behaviour: `array[f(x, y, z)]` simulates `array[x][y][z]`, where `f(x, y, z)` returns an integer index.
+Array indexes are then calculated with an offset to provide the multi-dimensional behaviour.
+`array[f(x, y, z)]` simulates `array[x][y][z]`, where `f(x, y, z)` returns an integer index.
 
 To calculate index `i` for `array3d[x][y][z]`:
 
@@ -45,7 +46,7 @@ i     x     y     z     val
 25    2     2     1     C21
 26    2     2     2     C22
 ```
-To access `array[2][1][1]`, flatArray[f(2, 1, 1)] is used. This is computed to retrieve `flatArray[22]` - in this case the value C11 is retrieved.
+To access `array[2][1][1]`, `flatArray[f(2, 1, 1)]` is used. This is computed to retrieve `flatArray[22]` - in this case the value C11 is retrieved.
 
 ## Demo
 
