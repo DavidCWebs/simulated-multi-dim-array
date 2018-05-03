@@ -5,14 +5,14 @@ Represent a 3d array as a single array by using offsets to compute the array ind
 This repo is just a learning exercise.
 
 ## Example Array
-For a conceptual "3D" array `array3d[xmax][ymax][zmax]`, the total number of elements required to represent this as a flat array is `xmax * ymax * zmax`: `array3d[xmax * ymax * zmax]`.
+For a conceptual "3D" array `array3d[xmax][ymax][zmax]`, the total number of elements required to represent this as a flat array is `xmax * ymax * zmax` - so theh array should be initialized with `array3d[xmax * ymax * zmax]`.
 
 Array indexes are then calculated with an offset to provide the multi-dimensional behaviour.
 `array[f(x, y, z)]` simulates `array[x][y][z]`, where `f(x, y, z)` returns an integer index.
 
 To calculate index `i` for `array3d[x][y][z]`:
 
-` i = x * (ymax * zmax)) + (y * zmax) + z`
+` i = (x * (ymax * zmax)) + (y * zmax) + z`
 
 ## Array Visualisation
 ```

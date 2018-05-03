@@ -51,7 +51,7 @@ void output(const int *array, int size)
             for (int z = 0; z < DIMENSION_3; z++) {
                 index = getIndex(x, y, z);
                 printf("array[%d][%d][%d] = %d\t", x, y, z, array[index]);
-                printf("Index: %d, Value: %d\n", index, ((x + 1) * (y + 1) * (z + 1)));
+                printf("Index: %d, Value: %d\t%p\n", index, ((x + 1) * (y + 1) * (z + 1)), (void*)&array[index]);
             }
         }
     }
